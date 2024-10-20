@@ -1,85 +1,84 @@
 #include<iostream>
+#include<vector>
+#include<string>
 
 using namespace std;
 
-struct tree
+struct tnode
 {
-    char data;
-    tree* left;
-    tree* right;
-    
-    tree(char val)
-    {
+     char data;
+     tnode* left;
+     tnode* right;
+     
+     tnode(char val)
+     {
          data = val;
-         left = right = nullptr;
-    }
+         left = nullptr;
+         right = nullptr;
+     }
 };
 
-tree* insert(tree* root , char data)
+tnode* insert(tnode* root, char data)
 {
-    //To check whether root node is empty
-    if(root == nullptr)
-    {
-         return new tree(data);
-    }
-    //Check and insert on left data node
-    if(data < root -> data)
-    {
+     if(root == nullptr)
+     {
+         return new tnode(data); 
+     }
+     
+     if(data < root -> data)
+     {
          root -> left = insert(root -> left , data);
-    }
-    else
-    {    
-         //else insert in right node
-         root -> right = insert(root -> right , data);
-    }
-    return root;
+     }
+     
+     else if(data > root -> data)
+             {
+                 root -> right = insert(root -> right , data);
+             }
+     
+     return root;
 }
 
-void inorderTrav(tree* root)
+void preorder(tnode* root)
 {
      if(root != nullptr)
      {
-          inorderTrav(root -> left);//traverse left node
-          cout<<root -> data<<" "; //Processing the node
-          inorderTrav(root -> right);//traverse right node
+         cout<<root -> data<<" ";
+         preorder(root -> left);
+         preorder(root -> right);
      }
 }
 
-void preorderTrav(tree* root)
+void inorder(tnode* root)
 {
      if(root != nullptr)
      {
-         cout<<root -> data<<" ";//Processing the node
-         preorderTrav(root -> left);//traverse the left node
-         preorderTrav(root -> right);//traverse the right node
+         inorder(root -> left);
+         cout<<root -> data<<" ";
+         inorder(root -> right);
      }
 }
 
 int main()
 {
-     tree* root = nullptr;
      string name;
      
-     cout<<"Enter you name: ";
-     getline(cin , name);
+     cout<<"Enter the name: ";
+     cin>>name;
      
-     //Insert char of name inside BST
-     for(char c : name)
+     tnode* root = nullptr;
+     
+     for(char ch: name)
      {
-          if(c != ' ')
-          {
-               root = insert(root , c);
-          }
+         root = insert(root , ch);
      }
      
-     // Perform Inorder and Preorder Traversals
-     cout << "Inorder Traversal: ";
-     inorderTrav(root);
-     cout << endl;
+     cout<<"Preorder: ";
+     preorder(root);
+     cout<<endl;
      
-     cout << "Preorder Traversal: ";
-     preorderTrav(root);
-     cout << endl;
+     cout<<"Inorder: ";
+     inorder(root);
+     cout<<endl;
      
      return 0;
 }
