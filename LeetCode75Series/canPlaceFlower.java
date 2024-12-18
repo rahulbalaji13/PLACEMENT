@@ -22,10 +22,20 @@ class Solution
          for(int i = 0; i < flowerbed.length; i++)
          {
              if(flowerbed[i] == 0 && (i == 0 || flowerbed[i - 1] == 0) && (i == flowerbed.length - 1 || flowerbed[i + 1] == 0)) 
+/* 
+flowerbed[i] == 0 - checks the flower bed is empty 
+i == 0 - points to intial postion, in which flowerbed is empty
+flowerbed[i-1] == 0 - check last end of flower bed or adjacent left is empty 
+flowerbed.length - 1 -> checks whether the flowerbed on rear or last end (i.e) n - 1
+flowerbed[i+1] == 0 - checks whether adjacent right of flowerbed is empty
+*/
              {
-                 flowerbed[i] = 1; 
+                 flowerbed[i] = 1;  
                  n--;
-
+/* 
+when all the above condition satisfy then we place new flower: flowerbed[i] = 1
+then we update n number of flower by decremeting n-- after flower was placed to show it.
+*/
                  if(n == 0) 
                      return true;
              }
@@ -34,13 +44,6 @@ class Solution
     }    
 }
 
-/* 
-flowerbed[i] == 0 - checks the flower bed is empty 
-i == 0 - points to intial postion, in which flowerbed is empty
-flowerbed[i-1] == 0 - check last end of flower bed or adjacent left is empty 
-flowerbed.length - 1 -> checks whether the flowerbed on rear or last end (i.e) n - 1
-flowerbed[i+1] == 0 - checks whether adjacent right of flowerbed is empty
+/* TC = O(N)*/
 
-when all the above condition satisfy then we place new flower: flowerbed[i] = 1
-then we update n number of flower by decremeting n-- after flower was placed to show it.
-*/
+
