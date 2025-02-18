@@ -22,11 +22,11 @@ class Solution
        
        while(even != null && even.next != null)
        {
-         //You mist solve extra O(1) space complexity and swap operation suits that complexity
+         //You must solve extra O(1) space complexity and swap operation suits that complexity
          odd.next = even.next;
          odd = odd.next;
          even.next = odd.next;
-         even =even.next;
+         even = even.next;
        }
          odd.next = temp;
          return head;
