@@ -2,6 +2,7 @@
 
 1261. Find Elements in a Contaminated Binary Tree
 
+/**
  * Definition for a binary tree node.
  * public class TreeNode {
  *     int val;
@@ -16,14 +17,30 @@
  *     }
  * }
  */
-class FindElements {
 
-    public FindElements(TreeNode root) {
-        
+class FindElements 
+{
+    HashSet rv = new HashSet<>();
+    public FindElements(TreeNode root) 
+    {
+        dfs(root, 0);
     }
     
-    public boolean find(int target) {
+    public boolean find(int target) 
+    {
+       return rv.contains(target); // Contains checks the hashset whether the particular value is exist in them. Return true or false accordingly.       
+    }
+
+    public void dfs(TreeNode root, int element) // Helper function to recover tree values
+    {
+        if(root == null)
+           return;
         
+        root.val = element;
+        rv.add(element);
+
+        dfs(root.left, 2 * element + 1);
+        dfs(root.right, 2 * element + 2);
     }
 }
 
