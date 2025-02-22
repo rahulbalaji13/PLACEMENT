@@ -32,10 +32,64 @@ Output: [1,401,null,349,88,90]
  Constraints: The number of nodes in the original tree is in the range [1, 1000].
 1 <= Node.val <= 109
 **/
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+
 class Solution 
 {
+    int i = 0;
     public TreeNode recoverFromPreorder(String traversal) 
     {
-              
+         return dfs(traversal, 0);    
+    }
+
+    public TreeNode dfs(String tv, int depth)
+    {
+       int count = 0;
+       int num = 0;
+
+       if(i >= tv.length())
+       {      
+             return null;
+       }
+       
+       while(i + count < tv.length() && tv.charAt(i + count) == '-')
+       {
+             count++;
+       }
+       
+       if(count != depth)
+       { 
+             return null;
+       }
+        
+        i += count;
+        
+        while(i < tv.length() && tv.charAt(i) != '-')
+        {
+             num = num * 10 + (tv.charAt(i) - '0');
+             i++;   
+        }
+        
+        TreeNode node = new TreeNode(num);
+        
+        node.left = dfs(tv, depth + 1);
+        node.right = dfs(tv, depth + 1);
+        
+        return node;
     }
 }
+
