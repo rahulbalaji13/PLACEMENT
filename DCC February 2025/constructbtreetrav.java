@@ -37,8 +37,32 @@ It is guaranteed that preorder and postorder are the preorder traversal and post
  *     }
  * }
  */
-class Solution {
-    public TreeNode constructFromPrePost(int[] preorder, int[] postorder) {
-        
+class Solution 
+{
+    int i = 0; // Index for preorder traversal
+    int j = 0; // Index for postorder traversal
+
+    public TreeNode constructFromPrePost(int[] preorder, int[] postorder) 
+    {
+         return construct(preorder, postorder);
+    }
+    public TreeNode construct(int[] preorder, int[] postorder)
+    {
+        TreeNode  root = new TreeNode(preorder[i]);
+        i++;
+
+        if(root.val != postorder[j])
+        {
+            root.left = construct(preorder, postorder);
+        } 
+
+        if(root.val != postorder[j]) // Check whether the root value is not equal to postorder 
+        {
+            root.right = construct(preorder, postorder);
+        }
+
+        j++;
+
+        return root;
     }
 }
