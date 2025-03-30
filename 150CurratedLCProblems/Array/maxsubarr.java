@@ -24,3 +24,28 @@ Follow up: If you have figured out the O(n) solution, try coding another solutio
 **/
 
 import java.util.*;
+class Solution 
+{
+    public int maxSubArray(int[] nums) 
+    {
+        int maxSofar = nums[0]; 
+        int currSum = nums[0]; //Trace the current sum
+        int n = nums.length;
+        
+        for(int i = 1; i < n; i++)
+        {
+           if(currSum < 0)
+           {
+                 currSum = 0;
+           }
+
+           currSum = currSum + nums[i];
+           
+           if(currSum > maxSofar)
+           {
+             maxSofar = currSum;
+           }
+        }
+        return maxSofar;
+    }
+}
