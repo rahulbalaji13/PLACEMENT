@@ -32,6 +32,9 @@ Constraints:
 2 <= m == moveTime[i].length <= 50
 0 <= moveTime[i][j] <= 109
 **/
+
+//DIJKSTRA ALGORITHM APPROACH 
+
 class State //State class created for providing state space to store subsequent action like direction and time values 
 {
      int i;
@@ -99,3 +102,5 @@ class Solution
          return distance[m - 1][n - 1]; //This returns the last distance value calculated in between rooms and output is 6
     }
 }
+
+// TIME COMPLEXITY = O(M * N)
