@@ -1,3 +1,4 @@
+//TIME COMPLEXITY = O(N∗MLog(N∗M))
 class Solution {
     public int minTimeToReach(int[][] t) {
         int n = t.length, m = t[0].length;
