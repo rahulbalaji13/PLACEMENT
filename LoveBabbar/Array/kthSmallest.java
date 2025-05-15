@@ -41,3 +41,15 @@ class Solution
         return pq.peek(); //Show the top element from the queue 
     }    
 }
+
+/**
+⚙️ How It Works
+
+Comparator<Integer> cmp = (a, b) -> b - a;
+This means:
+
+If a = 5, b = 10 → b - a = 5 → b is placed before a.
+
+If a = 20, b = 10 → b - a = -10 → a is placed before b.
+
+**/
