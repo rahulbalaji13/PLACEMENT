@@ -23,6 +23,15 @@ Constraints:
 Expected Complexities
 Time Complexity: O(n)
 Auxiliary Space: O(1)
+
+| Iteration (i) | `arr[i]` | `min` Before | `max` Before | Condition `arr[i] < min` | `min` After | Condition `arr[i] > max` | `max` After |
+| ------------- | -------- | ------------ | ------------ | ------------------------ | ----------- | ------------------------ | ----------- |
+| -             | -        | -            | -            | -                        | 1           | -                        | 1           |
+| 1             | 345      | 1            | 1            | false                    | 1           | true                     | 345         |
+| 2             | 234      | 1            | 345          | false                    | 1           | false                    | 345         |
+| 3             | 21       | 1            | 345          | false                    | 1           | false                    | 345         |
+| 4             | 56789    | 1            | 345          | false                    | 1           | true                     | 56789       |
+
 **/
 
 class Solution {
