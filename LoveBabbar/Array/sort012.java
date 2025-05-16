@@ -24,6 +24,8 @@ Company Tags
 PaytmFlipkartMorgan StanleyAmazonMicrosoftOYO RoomsSamsungSnapdealHikeMakeMyTripOla CabsWalmartMAQ SoftwareAdobeYatra.comSAP LabsQualcomm
 **/
 
+//DUTCH NATIONAL FLAG ALGORITHM
+
 class Solution 
 {
     // Function to sort an array of 0s, 1s, and 2s
