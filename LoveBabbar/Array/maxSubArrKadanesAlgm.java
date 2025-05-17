@@ -41,3 +41,33 @@ class Solution
         return ans;
     }
 }
+
+/**
+Example:
+Input: arr = [3, -1, 2, -1, 6, -5, 4]
+
+Initialization:
+n = 7 (array length)
+
+maxEnd = 3 (starts with the first element)
+
+ans = 3 (stores the maximum sum found so far)
+
+Iteration through the array:
+Index	arr[i]	maxEnd = max(arr[i] + maxEnd, arr[i])	ans = max(ans, maxEnd)
+1	-1	max(3 + (-1), -1) = 2	max(3, 2) = 3
+2	2	max(2 + 2, 2) = 4	max(3, 4) = 4
+3	-1	max(4 + (-1), -1) = 3	max(4, 3) = 4
+4	6	max(3 + 6, 6) = 9	max(4, 9) = 9
+5	-5	max(9 + (-5), -5) = 4	max(9, 4) = 9
+6	4	max(4 + 4, 4) = 8	max(9, 8) = 9
+Final Output:
+return ans = 9
+
+Explanation:
+The algorithm maintains a running sum (maxEnd), ensuring we either extend the previous subarray or start a new one.
+
+It updates the global maximum (ans) at each step.
+
+The optimal subarray for this input is [3, -1, 2, -1, 6], which sums to 9.
+**/
