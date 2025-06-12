@@ -39,6 +39,7 @@ Constraints:
 The number of nodes in the tree is in the range [1, 1000].
 0 <= Node.val <= 1000
 **/
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -54,6 +55,7 @@ The number of nodes in the tree is in the range [1, 1000].
  *     }
  * }
  */
+
 class Solution 
 {
     TreeMap<Integer, TreeMap<Integer, PriorityQueue<Integer>>> map = new TreeMap<>(); //Tree map for getting iterating input nodes
@@ -84,7 +86,7 @@ class Solution
              return res;
     }
 
-    private void levelorder(TreeNode curr, int index, int level)
+    private void levelorder(TreeNode curr, int level, int index)
     {
          if(curr == null)
         
@@ -93,7 +95,8 @@ class Solution
          map.putIfAbsent(index, new TreeMap<>());
          map.get(index).putIfAbsent(level, new PriorityQueue<>());
          map.get(index).get(level).add(curr.val);
-         levelorder(curr.left, index - 1, level + 1);
-         levelorder(curr.right, index + 1, level + 1);
+         
+         levelorder(curr.left, level + 1, index - 1);
+         levelorder(curr.right, level + 1, index + 1);
     }
 }
