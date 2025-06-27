@@ -24,10 +24,11 @@
  *     }
  * }
  */
+
 class Solution {
     public int maxPathSum(TreeNode root) {
         int[] maxi = new int[1];
-        maxi[0] = Integer.MIN_VALUE;
+        maxi[0] = Integer.MIN_VALUE; 
         maxPath(root, maxi);
         return maxi[0];
         
@@ -41,29 +42,6 @@ class Solution {
         int rightSum = Math.max(0, maxPath(root.right, maxi));
 
         maxi[0] = Math.max(maxi[0], leftSum + rightSum + root.val);
-        return Math.max(leftSum, rightSum)+root.val;
-    }
-}
- *     }
- * }
- */
-class Solution {
-    public int maxPathSum(TreeNode root) {
-        int[] maxi = new int[1];
-        maxi[0] = Integer.MIN_VALUE;
-        maxPath(root, maxi);
-        return maxi[0];
-        
-    }
-    int maxPath(TreeNode root, int[] maxi)
-    {
-       if(root == null)
-              return 0;
-
-        int leftSum = Math.max(0, maxPath(root.left, maxi));
-        int rightSum = Math.max(0, maxPath(root.right, maxi));
-
-        maxi[0] = Math.max(maxi[0], leftSum + rightSum + root.val);
-        return Math.max(leftSum, rightSum)+root.val;
+        return Math.max(leftSum, rightSum)+root.val; // In order to know we take left or right path
     }
 }
