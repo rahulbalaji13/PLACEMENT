@@ -37,3 +37,47 @@ int main()
  
     return 0;
 }
+
+//3. Reverse the array element 
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int a[] = {1,2,3,4,5};
+    reverse(a,a+5);
+    for(int i = 0; i < 5; i++)
+    {
+        cout<<a[i];
+    }
+    return 0;
+}
+
+//4. Check the number is palindrome or not
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n = 78987;
+    int temp = n;
+    int rev = 0;
+    
+    while(temp != 0)
+    {
+       int last = temp % 10;
+       rev = rev * 10 + last;
+       temp=temp/10;
+    }
+    if(rev == n)
+    {
+        cout<<"palindrome";
+    }
+    else 
+    {
+        cout<<"Not palindrome";
+    }
+    return 0;
+}
+
+
+
