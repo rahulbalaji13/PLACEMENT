@@ -79,5 +79,27 @@ int main()
     return 0;
 }
 
+//5. Check odd or even for array of elements 
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    vector<int> arr = {1,2,3,4,5};
+    
+    for(int a:arr)
+    {
+        if(a % 2 == 0)
+        {
+            cout<<"Even"<<endl;
+        }
+        else 
+        {
+            cout<<"Odd"<<endl;
+        }
+    }
+    return 0;
+}
+
+
 
 
