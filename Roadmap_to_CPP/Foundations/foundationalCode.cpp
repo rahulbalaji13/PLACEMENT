@@ -176,6 +176,28 @@ int main()
 
 //8. Remove deuplicates from an array
 
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int arr[] = {1,2,3,3,5};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    set<int> unique;
+    
+    for(int i = 0; i < n; i++)
+    {
+        unique.insert(arr[i]);
+    }
+    
+    for(int point : unique)
+    {
+        cout<<point;   
+    }
+
+    return 0;
+}
+
+//9. Merge two sorted arrays
 
 
 
