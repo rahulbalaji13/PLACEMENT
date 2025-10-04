@@ -79,7 +79,27 @@ int main()
     return 0;
 }
 
-//5. Check odd or even for array of elements 
+//5. Check whether the given string is palindrome or not
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string s = "MADAM";
+    string temp = s;
+    reverse(s.begin(),s.end());
+    
+    if(temp == s)
+    {
+        cout<<"Palindrome"<<endl;
+    }
+    else
+    {
+        cout<<"Not Palindrome"<<endl;
+    }
+    return 0;
+}
+
+//6. Check odd or even for array of elements 
 #include<bits/stdc++.h>
 using namespace std;
 int main()
@@ -99,6 +119,62 @@ int main()
     }
     return 0;
 }
+//7. Find the second largest and smallest element 
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int arr[] = {1,2,3,4,5};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    
+    int largest = INT_MIN, second_largest = INT_MIN;
+    int smallest = INT_MAX, second_smallest = INT_MAX;
+    
+    for(int i = 0; i < n; i++)
+    {
+        if(arr[i] > largest)
+        {
+            largest = arr[i];
+        }
+        if(arr[i] < smallest)
+        {
+            smallest = arr[i];
+        }
+    }
+    
+    for(int i = 0; i < n; i++)
+    {
+        if(arr[i] != largest && arr[i] > second_largest)
+        {
+            second_largest = arr[i];
+        }
+        if(arr[i] != smallest && arr[i] < second_smallest)
+        {
+            second_smallest = arr[i];
+        }
+    }
+    
+    if(second_largest == INT_MIN)
+    {
+        cout<<"No second largest exist"<<"\n";
+    }
+    else
+    {
+        cout<<"Second largest exist"<<second_largest<<"\n";
+    }
+    if(second_smallest == INT_MAX)
+    {
+        cout<<"No second smallest exist"<<"\n";
+    }
+    else
+    {
+        cout<<"Second smallest exist"<<second_smallest<<"\n";
+    }
+    return 0;
+}
+
+//8. Remove deuplicates from an array
 
 
 
