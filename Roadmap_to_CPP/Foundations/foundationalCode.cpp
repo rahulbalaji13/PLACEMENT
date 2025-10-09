@@ -199,5 +199,21 @@ int main()
 
 //9. Merge two sorted arrays
 
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    vector<int> v1 = {1,2,3};
+    vector<int> v2 = {4,5,6};
+    vector<int> res(v1.size() + v2.size());
+    
+    merge(v1.begin(),v1.end(),v2.begin(),v2.end(),res.begin());
+    
+    for(int num : res)
+    {
+        cout<<num<<" ";
+    }
+    return 0;
+}
 
 
