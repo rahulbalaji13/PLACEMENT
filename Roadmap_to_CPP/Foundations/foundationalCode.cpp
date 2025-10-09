@@ -198,7 +198,6 @@ int main()
 }
 
 //9. Merge two sorted arrays
-
 #include<bits/stdc++.h>
 using namespace std;
 int main()
@@ -215,5 +214,50 @@ int main()
     }
     return 0;
 }
+
+//Move all zeros to end of an array 
+#include<bits/stdc++.h>
+using namespace std;
+
+void moveZero(int arr[], int n)
+{
+   int result = 0;
+   for(int i = 0; i < n; i++)
+   {
+       if(arr[i] != 0)
+       {
+         arr[result++] = arr[i];
+       }
+    }
+    while(result < n)
+    {
+          arr[result++] = 0;
+    }
+}
+
+int main()
+{
+    int arr[] = {1,2,0,3,4,0,0};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    moveZero(arr,n);
+    for(int i = 0; i < n; i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    return 0;
+}
+
+//Rotate an array by k position
+
+
+
+
+
+
+
+
+
+
+
 
 
