@@ -248,8 +248,6 @@ int main()
 }
 
 //Rotate an array by k position
-//Rotate the element in array for k positions
-
 #include<bits/stdc++.h>
 using namespace std;
 void rotatekpos(int arr[], int n, int k)
@@ -285,6 +283,37 @@ int main()
    }
    return 0;
 }
+
+/**
+Using C++ STL for above code:
+
+//Rotate the element in array for k positions
+
+#include<bits/stdc++.h>
+using namespace std;
+void rotatekpos(vector<int>&arr,int k)
+{
+    int n = arr.size();
+    k = k % n;
+    
+    reverse(arr.begin(),arr.end());
+    reverse(arr.begin(),arr.begin() + k);
+    reverse(arr.begin() + k,arr.end());
+}
+
+int main()
+{
+   vector<int> arr = {1,2,3,4,7,8,9};
+   int k = 2;
+   int n = arr.size();
+   rotatekpos(arr,k);
+   for(int i = 0; i < n; i++)
+   {
+       cout<<arr[i]<<" ";
+   }
+   return 0;
+}
+**/
 
 
 
