@@ -1,4 +1,6 @@
 """
+IMPORTANT:                                                                                             DYNAMIC PROGRAMMING PATTERN
+
 Wildcard Pattern Matching
 Difficulty: MediumAccuracy: 31.13%Submissions: 96K+Points: 4
 Given two strings pat and txt which may be of different sizes, You have to return true if the wildcard pattern i.e. pat, matches with txt else return false.
