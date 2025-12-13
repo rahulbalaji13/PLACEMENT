@@ -1,4 +1,5 @@
 """
+IMPORTANT:                                                                                             DYNAMIC PROGRAMMING PATTERN
 Partition Equal Subset Sum
 Difficulty: MediumAccuracy: 30.24%Submissions: 280K+Points: 4
 Given an array arr[], determine if it can be partitioned into two subsets such that the sum of elements in both parts is the same.
