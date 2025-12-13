@@ -1,4 +1,6 @@
 """
+IMPORTANT:                                                                                             DYNAMIC PROGRAMMING PATTERN
+
 Form a palindrome
 Difficulty: MediumAccuracy: 45.4%Submissions: 117K+Points: 4
 Given a string, find the minimum number of characters to be inserted to convert it to a palindrome string.
