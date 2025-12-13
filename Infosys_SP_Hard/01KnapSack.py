@@ -1,4 +1,6 @@
 """
+IMPORTANT:                                                                                             DYNAMIC PROGRAMMING PATTERN
+
 0 - 1 Knapsack Problem
 Difficulty: MediumAccuracy: 31.76%Submissions: 545K+Points: 4
 Given two arrays, val[] and wt[], where each element represents the value and weight of an item respectively, and an integer W representing the maximum capacity of the knapsack (the total weight it can hold).
