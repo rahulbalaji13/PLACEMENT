@@ -22,3 +22,26 @@ Constraints:
 1 ≤ arr[i] ≤ 200
 """
 
+from math import inf
+class Solution:
+    def matrixMultiplication(self, arr):
+        N = len(arr)
+        n = N - 1
+        
+        if n <= 1:
+            return 0
+            
+        dp = [[0] * N for _ in range(N)]
+        
+        for length in range(2, n + 1):
+            for i in range(1, n - length + 2):
+                j = i + length - 1
+                dp[i][j] = inf
+                
+                for k in range(i, j):
+                    cost = (dp[i][k] + dp[k + 1][j] + arr[i - 1] * arr[k] * arr[j])
+                    if cost < dp[i][j]:
+                        dp[i][j] = cost
+        
+        return dp[1][n]
+
