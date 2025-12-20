@@ -54,10 +54,53 @@ for j in range(n - 2, -1, -1):
 number = input()
 print(sum(int(d) for d in number))
 
+#11. Regular expression - extract the user id, domain name, and suffix from the following email addresses
+import re
+import sys
 
+s = sys.stdin.read().strip()
 
+pattern = r'(\w+)@(\w+)\.(\w+)'
+matches = re.findall(pattern, s)
 
+for u, d, suf in matches:
+    print(u, d, suf)
 
+#12. NumPy Module - extract all odd number array using numpy array
+import numpy as np
+
+n = list(map(int, input().strip().split()))
+
+arr = np.array(n)
+
+odd_arr = arr[arr % 2 != 0]
+
+print(odd_arr)
+
+#13. to get the common unique items between two arrays sorted in ascending order using NumPy function.
+import numpy as np
+
+nums1 = list(map(int, input().strip().split()))
+nums2 = list(map(int, input().strip().split()))
+
+arr1 = np.array(nums1)
+arr2 = np.array(nums2)
+
+unique = np.intersect1d(arr1, arr2)
+
+print(unique)
+
+#15.  find the sum of digits of a number - Ex: I/P: 12345 so, O/P: 15
+def sumOfDigits(num):
+    sum = 0
+    while num!=0:
+        digit = int(num%10)
+        sum += digit
+        num = num/10
+    return sum;
+
+num = int(input())
+print(sumOfDigits(num))
 
 
 
