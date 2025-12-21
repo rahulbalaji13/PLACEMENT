@@ -102,6 +102,40 @@ def sumOfDigits(num):
 num = int(input())
 print(sumOfDigits(num))
 
+#16. Write a program to get the last part of a string before a specified character. Note: Specified characters are "/" and "-"
+s = input().strip()
+if "/" in s:
+    print(s.rsplit("/", 1)[0])
+else:
+    print(s)
+if "-" in s:
+    print(s.rsplit("-", 1)[0])
+else:
+    print(s)
+
+#17. LIST (CHANGEABLE): Lists are used to store mutiple items in a single variable that ordered, chageable and allowed to be duplicated. 
+
+
+
+
+
+# TUPLE (NOT CHANGEABLE):
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
