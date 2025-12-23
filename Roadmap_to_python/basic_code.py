@@ -113,14 +113,25 @@ if "-" in s:
 else:
     print(s)
 
-#17. LIST (CHANGEABLE): Lists are used to store mutiple items in a single variable that ordered, chageable and allowed to be duplicated. 
+# 17. Find maximum sum from list
+n=int(input())
+arr=[int(i) for i in input().split()][:n]
+add=0
+for i in range(0,n,2):
+    if arr[i]<arr[i+1]:
+        add+=arr[i]
+    else:
+        add+=arr[i+1]
+print(add)
 
+#18. Given a list of numbers in python List. Write a Python program to create a list of tuples having the first element as the number and the second element as the cube of the number.
 
+inp = input().split()
+for i in range(0,len(inp)):
+    inp[i] = int(inp[i])
 
-
-
-# TUPLE (NOT CHANGEABLE):
-
+res = [(val, pow(val, 3)) for val in inp]
+print(res)
 
 
 
