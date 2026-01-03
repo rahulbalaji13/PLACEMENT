@@ -18,6 +18,25 @@ class Solution(object):
 
         return (a[n - 1] + b[n - 1]) % MOD        
 
+
+# OR---------->OPTIMIZED ONE AFTER REMOVING ARRAYS
+
+class Solution(object):
+    def numOfWays(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        MOD = 10**9 + 7
+        
+        a = b = 6
+        
+        for _ in range(1, n):
+            na = (2 * a + 2 * b) % MOD
+            nb = (2 * a + 3 * b) % MOD
+            a, b = na, nb
+        return (a + b) % MOD     
+        
 """
 Intuition
 We paint the grid one column at a time.
