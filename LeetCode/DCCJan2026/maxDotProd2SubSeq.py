@@ -49,3 +49,4 @@ class Solution(object):
         
         # Return the maximum dot product starting from position 0 in both arrays
         return prev[0]
+
