@@ -9,4 +9,5 @@ DAILY LEETCODE PROBLEM PRACTICE
 5. Maximum matrix sum
 6. Maximum level sum of binary tree
 7. Maximum product of splitted binary tree
-8. Max Dot Product of Two subsequences 
+8. Max Dot Product of Two subsequences
+9. Smallest subtree with all the deepest nodes
