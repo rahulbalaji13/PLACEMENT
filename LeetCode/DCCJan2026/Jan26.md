@@ -12,3 +12,5 @@ DAILY LEETCODE PROBLEM PRACTICE
 8. Max Dot Product of Two subsequences
 9. Smallest subtree with all the deepest nodes
 10. Maximum ASCII delete sum for two strings
+11. Maximum Rectangle
+12. Minimum time visiting all points
