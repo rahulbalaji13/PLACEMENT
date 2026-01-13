@@ -14,3 +14,4 @@ DAILY LEETCODE PROBLEM PRACTICE
 10. Maximum ASCII delete sum for two strings
 11. Maximum Rectangle
 12. Minimum time visiting all points
+13. Separate Squares I
