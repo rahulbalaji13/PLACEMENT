@@ -15,3 +15,6 @@ DAILY LEETCODE PROBLEM PRACTICE
 11. Maximum Rectangle
 12. Minimum time visiting all points
 13. Separate Squares I
+14. Seperate Squares II  (Segment Trees problem) - HARD LABEL
+15. Maximum Area of Square Hole in the Grid
+16. Maximum Square Area by Removing Fences from the Field 
