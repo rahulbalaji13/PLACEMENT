@@ -59,26 +59,41 @@ Follow up: Could you write a generalized algorithm to work on any possible set o
 
 class Solution:
 
-    def encode(self, strs: List[str]) -> str:
-        res = " "
-        for s in strs:
-          res += len(strs) + "#" + s
-        return res
+def encode(self, strs: List[str]) -> str:
+    # Start with an empty result string (no extra spaces)
+    res = ""
+    # Loop through each string in the input list
+    for s in strs:
+        # For each string, append: its length, then '#', then the string itself
+        # Example: "leet" -> "4#leet"
+        res += str(len(s)) + "#" + s
+    # Return the single encoded string containing all strings
+    return res
 
-    def decode(self, s: str) -> List[str]:
-        res = []
-        i = 0
-        while i < len(s):
-              j = i
-              while s[j] != '#':
-                    j += 1
-              length = int(s[i : j)
-              j = j + 1
-              j = i + length
-              res.append(s[i : j])
-              i = j
-
-        return res
+def decode(self, s: str) -> List[str]:
+    # This will store the decoded strings
+    res = []
+    # Pointer i will move through the encoded string
+    i = 0
+    # Process until we reach the end of the encoded string
+    while i < len(s):
+        # j will be used to find the position of '#'
+        j = i
+        # Move j forward until we find the '#' separator
+        while s[j] != '#':
+            j += 1
+        # The substring from i to j (not including j) is the length of the next string
+        # Convert that substring to an integer
+        length = int(s[i:j])
+        # Move i to the first character of the actual string (right after '#')
+        i = j + 1
+        # The next 'length' characters form the original string
+        # So take substring from i to i + length
+        res.append(s[i : i + length])
+        # Move i to the next segment (after the string we just extracted)
+        i = i + length
+    # Return the list of decoded strings
+    return res
 
 
 """
