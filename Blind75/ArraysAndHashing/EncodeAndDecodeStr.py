@@ -81,7 +81,37 @@ class Solution:
         return res
 
 
+"""
+Intuition
+Instead of storing all string lengths first and then appending the strings, we can directly attach each string to its length.
+For every string, we write length#string.
+The # character acts as a clear boundary between the length and the actual content, and using the length ensures we know exactly how many characters to read—no matter what characters appear in the string itself.
+During decoding, we simply read characters until we reach # to find the length, then extract exactly that many characters as the string.
+This approach is both simpler and more efficient because it avoids building separate sections for lengths and content.
 
+Algorithm
+
+Encoding
+
+Initialize an empty result string.
+For each string in the list:
+Compute its length.
+Append "length#string" to the result.
+Return the final encoded string.
+
+Decoding
+
+Initialize an empty list for the decoded strings and a pointer i = 0.
+While i is within the bounds of the encoded string:
+Move a pointer j forward until it finds '#' — this segment represents the length.
+Convert the substring s[i:j] into an integer length.
+Move i to the character right after '#'.
+Extract the next length characters — this is the original string.
+Append the extracted string to the result list.
+Move i forward by length to continue decoding the next segment.
+Return the list of decoded strings.
+
+"""
 
 
 
