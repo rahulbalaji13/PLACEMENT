@@ -17,4 +17,7 @@ DAILY LEETCODE PROBLEM PRACTICE
 13. Separate Squares I
 14. Seperate Squares II  (Segment Trees problem) - HARD LABEL
 15. Maximum Area of Square Hole in the Grid
-16. Maximum Square Area by Removing Fences from the Field 
+16. Maximum Square Area by Removing Fences from the Field
+17. Find the Largest Area of Square Inside Two Rectangles
+18. Largest Magic Square
+19. Maximum Side Length of a Square with Sum Less than or Equal to Threshold
