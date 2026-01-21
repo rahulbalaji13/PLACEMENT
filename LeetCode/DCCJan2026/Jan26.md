@@ -21,3 +21,5 @@ DAILY LEETCODE PROBLEM PRACTICE
 17. Find the Largest Area of Square Inside Two Rectangles
 18. Largest Magic Square
 19. Maximum Side Length of a Square with Sum Less than or Equal to Threshold
+20. Construct the Minimum Bitwise Array I
+21. Construct the Minimum Bitwise Array II
