@@ -23,3 +23,4 @@ DAILY LEETCODE PROBLEM PRACTICE
 19. Maximum Side Length of a Square with Sum Less than or Equal to Threshold
 20. Construct the Minimum Bitwise Array I
 21. Construct the Minimum Bitwise Array II
+22. Minimum Pair Removal to Sort Array I
