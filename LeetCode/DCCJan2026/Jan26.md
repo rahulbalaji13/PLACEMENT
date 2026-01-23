@@ -24,3 +24,4 @@ DAILY LEETCODE PROBLEM PRACTICE
 20. Construct the Minimum Bitwise Array I
 21. Construct the Minimum Bitwise Array II
 22. Minimum Pair Removal to Sort Array I
+23. Minimum Pair Removal to Sort Array II
