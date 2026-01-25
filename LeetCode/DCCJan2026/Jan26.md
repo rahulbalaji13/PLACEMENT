@@ -25,3 +25,5 @@ DAILY LEETCODE PROBLEM PRACTICE
 21. Construct the Minimum Bitwise Array II
 22. Minimum Pair Removal to Sort Array I
 23. Minimum Pair Removal to Sort Array II
+24. Minimize Maximum Pair Sum In Array
+25. Minimum Difference Between Highest and Lowest of K Scores
