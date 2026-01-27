@@ -28,4 +28,4 @@ DAILY LEETCODE PROBLEM PRACTICE
 24. Minimize Maximum Pair Sum In Array
 25. Minimum Difference Between Highest and Lowest of K Scores
 26. Minimum Absolute Difference
-27. Minimum Cost Path with Edge Reversals
+27. Minimum Cost Path with Edge Reversals  (Dijkstra algorithm)
