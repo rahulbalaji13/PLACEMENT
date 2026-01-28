@@ -29,3 +29,4 @@ DAILY LEETCODE PROBLEM PRACTICE
 25. Minimum Difference Between Highest and Lowest of K Scores
 26. Minimum Absolute Difference
 27. Minimum Cost Path with Edge Reversals  (Dijkstra algorithm)
+28. Minimum Cost Path with Teleportations
