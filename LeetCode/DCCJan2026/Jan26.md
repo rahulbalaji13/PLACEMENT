@@ -32,3 +32,4 @@ DAILY LEETCODE PROBLEM PRACTICE
 28. Minimum Cost Path with Teleportations
 29. Minimum Cost To Convert String I
 30. Minimum Cost To Convert String II
+31. Find Smallest Letter Greater Than Target
