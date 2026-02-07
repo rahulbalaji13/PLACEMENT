@@ -5,3 +5,5 @@
 3. Trionic Array I
 4. Trionic Array II
 5. Transformed Array I
+6. Minimum Removals to Balence Array
+7. Minimum Deletion to Make String Balenced
